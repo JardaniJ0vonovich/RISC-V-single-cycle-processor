@@ -3,6 +3,8 @@ module instruction_mem(clk,reset,read_address,instruction_out);
 	input [31:0] read_address;
 	output reg [31:0] instruction_out;
 
+	integer k;
+
 	reg[31:0] i_mem[63:0];
 
 	always@(posedge clk or posedge reset)
